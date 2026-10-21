@@ -1,0 +1,4732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>University of Layyah | Official Academic Blog</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root{
+    --green:#063d2b;
+    --dark:#021f15;
+    --green2:#0a513a;
+    --gold:#c6a13a;
+    --gold2:#e8d27c;
+
+    --cream:#f7f5ee;
+    --light:#fbfaf6;
+    --white:#ffffff;
+
+    --text:#25352e;
+    --muted:#6d7d75;
+    --line:#e5e1d5;
+
+    --shadow:0 18px 50px rgba(2,31,21,.10);
+    --shadow2:0 25px 70px rgba(0,0,0,.18);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#fff;
+    color:var(--text);
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar{
+    background:#011d13;
+    color:#aebfb7;
+    font-size:11px;
+}
+
+.topbar-inner{
+    min-height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.topbar span{
+    margin-right:22px;
+}
+
+.topbar i{
+    color:var(--gold2);
+    margin-right:5px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+    min-height:82px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.logo-text strong{
+    display:block;
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:20px;
+    line-height:1.1;
+}
+
+.logo-text small{
+    display:block;
+
+    color:#7b8781;
+
+    font-size:8px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.7px;
+
+    margin-top:4px;
+}
+
+
+/* NAV */
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:27px;
+    list-style:none;
+}
+
+.nav a{
+    position:relative;
+
+    color:#35463e;
+
+    font-size:11px;
+    font-weight:700;
+
+    padding:31px 0;
+}
+
+.nav a::after{
+    content:"";
+
+    position:absolute;
+
+    bottom:22px;
+    left:0;
+
+    width:0;
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.3s;
+}
+
+.nav a:hover,
+.nav a.active{
+    color:var(--green);
+}
+
+.nav a:hover::after,
+.nav a.active::after{
+    width:100%;
+}
+
+
+/* MOBILE */
+
+.menu{
+    display:none;
+
+    background:none;
+    border:0;
+
+    font-size:24px;
+
+    color:var(--green);
+
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    min-height:820px;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(1,28,18,.98) 0%,
+            rgba(2,49,32,.91) 42%,
+            rgba(2,49,32,.64) 67%,
+            rgba(0,0,0,.15) 100%
+        ),
+
+        url("https://ul.edu.pk//storage/career/files/Faculty-bdf81.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    right:-260px;
+    top:-250px;
+
+    border:1px solid rgba(232,210,124,.25);
+
+    border-radius:50%;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    right:-160px;
+    top:-160px;
+
+    border:1px solid rgba(232,210,124,.14);
+
+    border-radius:50%;
+}
+
+.hero-content{
+    position:relative;
+    z-index:3;
+
+    padding-top:75px;
+    padding-bottom:190px;
+}
+
+
+/* breadcrumb */
+
+.breadcrumb{
+    display:flex;
+    gap:9px;
+
+    color:#a9beb5;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:1.6px;
+
+    margin-bottom:28px;
+}
+
+.breadcrumb strong{
+    color:var(--gold2);
+}
+
+
+/* hero label */
+
+.label{
+    display:flex;
+    align-items:center;
+    gap:11px;
+
+    color:var(--gold2);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2.5px;
+
+    margin-bottom:17px;
+}
+
+.label-line{
+    width:40px;
+    height:1px;
+    background:var(--gold);
+}
+
+
+/* title */
+
+.hero h1{
+    max-width:850px;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:69px;
+
+    line-height:1.03;
+
+    letter-spacing:-2px;
+
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:var(--gold2);
+}
+
+
+/* description */
+
+.hero-desc{
+    max-width:690px;
+
+    color:#d5e2dc;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    margin-bottom:31px;
+}
+
+
+/* =========================================================
+   BSIT FEATURE
+========================================================= */
+
+.feature{
+
+    max-width:800px;
+
+    padding:25px 28px;
+
+    background:rgba(255,255,255,.09);
+
+    border:1px solid rgba(255,255,255,.20);
+
+    border-left:4px solid var(--gold);
+
+    border-radius:8px;
+
+    backdrop-filter:blur(13px);
+
+    box-shadow:var(--shadow2);
+}
+
+.feature-head{
+
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.feature-label{
+
+    color:var(--gold2);
+
+    font-size:8px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+.feature h2{
+
+    color:white;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    margin-top:3px;
+}
+
+.degree{
+
+    width:62px;
+    height:62px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(232,210,124,.7);
+
+    border-radius:50%;
+
+    color:var(--gold2);
+
+    font-family:"Playfair Display",serif;
+
+    font-weight:800;
+}
+
+.feature p{
+
+    color:#cadbd4;
+
+    font-size:11px;
+
+    line-height:1.85;
+
+    margin:9px 0 15px;
+}
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-bottom:18px;
+}
+
+.tags span{
+
+    padding:5px 9px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.14);
+
+    background:rgba(255,255,255,.05);
+
+    color:#dce7e2;
+
+    font-size:8px;
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:11px 16px;
+
+    background:var(--gold);
+
+    color:#10281c;
+
+    border-radius:4px;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    transition:.25s;
+}
+
+.btn:hover{
+
+    background:var(--gold2);
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   DEPARTMENTS
+========================================================= */
+
+.departments{
+    margin-top:28px;
+}
+
+.departments-title{
+
+    color:#91a79c;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    font-weight:800;
+
+    margin-bottom:9px;
+}
+
+.dept-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:8px;
+}
+
+.dept{
+
+    min-height:68px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:11px;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    background:rgba(0,0,0,.25);
+
+    border-radius:5px;
+}
+
+.dept-number{
+
+    color:var(--gold2);
+
+    font-size:9px;
+
+    font-weight:800;
+}
+
+.dept strong{
+
+    display:block;
+
+    color:#edf4f1;
+
+    font-size:9px;
+
+    line-height:1.3;
+}
+
+.dept small{
+
+    display:block;
+
+    color:#91a69d;
+
+    font-size:7px;
+
+    margin-top:3px;
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.hero-stats{
+
+    position:absolute;
+
+    bottom:0;
+    left:0;
+    right:0;
+
+    z-index:5;
+
+    background:rgba(1,26,17,.96);
+
+    border-top:1px solid rgba(255,255,255,.10);
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+
+    min-height:88px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:15px 23px;
+
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat strong{
+
+    color:var(--gold2);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:23px;
+}
+
+.stat span{
+
+    color:#90a79d;
+
+    font-size:8px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section:not(.hero){
+    padding:92px 0;
+}
+
+.section-head{
+
+    max-width:760px;
+
+    margin-bottom:42px;
+}
+
+.eyebrow{
+
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    color:#967a19;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:11px;
+}
+
+.eyebrow::before{
+
+    content:"";
+
+    width:31px;
+
+    height:1px;
+
+    background:var(--gold);
+}
+
+.section-head h2{
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:44px;
+
+    line-height:1.15;
+
+    margin-bottom:12px;
+}
+
+.section-head p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    background:var(--cream);
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:55px;
+
+    align-items:center;
+}
+
+.about-image{
+
+    position:relative;
+
+    border-radius:9px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow2);
+}
+
+.about-image img{
+
+    height:470px;
+
+    object-fit:cover;
+}
+
+.image-caption{
+
+    position:absolute;
+
+    left:20px;
+    right:20px;
+    bottom:20px;
+
+    padding:17px;
+
+    background:rgba(2,34,23,.95);
+
+    border-left:3px solid var(--gold);
+
+    border-radius:5px;
+
+    color:#fff;
+}
+
+.image-caption strong{
+
+    display:block;
+
+    color:var(--gold2);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:20px;
+}
+
+.image-caption span{
+
+    color:#c6d6cf;
+
+    font-size:9px;
+}
+
+.about-text h3{
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    line-height:1.2;
+
+    margin-bottom:14px;
+}
+
+.about-text p{
+
+    color:#63736b;
+
+    font-size:12px;
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+}
+
+.checks{
+
+    display:grid;
+
+    gap:10px;
+
+    list-style:none;
+
+    margin-top:20px;
+}
+
+.checks li{
+
+    display:flex;
+
+    gap:10px;
+
+    color:#4c5d55;
+
+    font-size:11px;
+}
+
+.checks i{
+    color:var(--gold);
+    margin-top:4px;
+}
+
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+.programs{
+    background:#fff;
+}
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:19px;
+}
+
+.program{
+
+    padding:27px;
+
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:7px;
+
+    transition:.3s;
+}
+
+.program:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+
+    border-color:#d6c37d;
+}
+
+.program-icon{
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#f4edda;
+
+    color:#987b19;
+
+    border-radius:7px;
+
+    font-size:19px;
+
+    margin-bottom:17px;
+}
+
+.program h3{
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+.program p{
+
+    color:#718079;
+
+    font-size:10px;
+
+    line-height:1.8;
+}
+
+.program .badge{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:5px 9px;
+
+    background:#edf4ef;
+
+    color:var(--green);
+
+    border-radius:15px;
+
+    font-size:7px;
+
+    font-weight:800;
+}
+
+
+/* =========================================================
+   BSIT
+========================================================= */
+
+.bsit{
+
+    background:var(--green);
+
+    color:#fff;
+}
+
+.bsit-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:55px;
+
+    align-items:center;
+}
+
+.bsit .section-head h2{
+    color:white;
+}
+
+.bsit .section-head p{
+    color:#bfd0c8;
+}
+
+.bsit-text p{
+
+    color:#c0d1c9;
+
+    font-size:12px;
+
+    line-height:1.9;
+
+    margin-bottom:16px;
+}
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:9px;
+
+    margin-top:20px;
+}
+
+.feature-small{
+
+    padding:13px;
+
+    border:1px solid rgba(255,255,255,.11);
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:5px;
+}
+
+.feature-small i{
+
+    color:var(--gold2);
+
+    margin-right:6px;
+}
+
+.feature-small span{
+
+    color:#dce8e2;
+
+    font-size:9px;
+}
+
+.bsit-image{
+
+    overflow:hidden;
+
+    border-radius:8px;
+
+    border:1px solid rgba(255,255,255,.13);
+
+    box-shadow:var(--shadow2);
+}
+
+.bsit-image img{
+
+    height:440px;
+
+    object-fit:cover;
+}
+
+
+/* =========================================================
+   LABORATORIES
+========================================================= */
+
+.labs{
+    background:var(--cream);
+}
+
+.lab-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.lab-card{
+
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.lab-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+}
+
+.lab-image{
+
+    height:225px;
+
+    overflow:hidden;
+
+    background:#ddd;
+}
+
+.lab-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.lab-card:hover .lab-image img{
+    transform:scale(1.05);
+}
+
+.lab-content{
+
+    padding:20px;
+}
+
+.lab-number{
+
+    color:#987b18;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+}
+
+.lab-content h3{
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:21px;
+
+    margin:5px 0 8px;
+}
+
+.lab-content p{
+
+    color:#718079;
+
+    font-size:10px;
+
+    line-height:1.75;
+}
+
+.lab-list{
+
+    margin-top:13px;
+
+    padding-top:13px;
+
+    border-top:1px solid var(--line);
+
+    display:grid;
+
+    gap:5px;
+
+    list-style:none;
+}
+
+.lab-list li{
+
+    color:#56665e;
+
+    font-size:9px;
+}
+
+.lab-list i{
+
+    color:var(--gold);
+
+    margin-right:5px;
+}
+
+
+/* =========================================================
+   LAB SPECIFICATIONS
+========================================================= */
+
+.lab-specs{
+
+    margin-top:32px;
+
+    padding:28px;
+
+    background:var(--green);
+
+    color:white;
+
+    border-radius:8px;
+
+    box-shadow:var(--shadow);
+}
+
+.lab-specs h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:27px;
+
+    margin-bottom:7px;
+}
+
+.lab-specs p{
+
+    color:#bfd1c9;
+
+    font-size:11px;
+
+    margin-bottom:22px;
+}
+
+.spec-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:10px;
+}
+
+.spec{
+
+    padding:15px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:5px;
+}
+
+.spec i{
+
+    color:var(--gold2);
+
+    margin-bottom:7px;
+
+    display:block;
+}
+
+.spec strong{
+
+    display:block;
+
+    font-size:10px;
+
+    color:#fff;
+
+    margin-bottom:3px;
+}
+
+.spec span{
+
+    color:#a9bdb4;
+
+    font-size:8px;
+}
+
+
+/* =========================================================
+   DLD LAB
+========================================================= */
+
+.dld{
+
+    background:#fff;
+}
+
+.dld-grid{
+
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.dld-image{
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+}
+
+.dld-image img{
+
+    height:410px;
+
+    object-fit:cover;
+}
+
+.dld-content h3{
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:31px;
+
+    margin-bottom:10px;
+}
+
+.dld-content p{
+
+    color:#6d7b74;
+
+    font-size:12px;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+}
+
+.equipment{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+}
+
+.equipment div{
+
+    padding:13px;
+
+    border:1px solid var(--line);
+
+    border-radius:5px;
+
+    color:#52635b;
+
+    font-size:10px;
+
+    background:#faf9f4;
+}
+
+.equipment i{
+
+    color:var(--gold);
+
+    margin-right:7px;
+}
+
+
+/* =========================================================
+   FACULTY
+========================================================= */
+
+.faculty{
+    background:#f8f7f2;
+}
+
+.faculty-layout{
+
+    display:grid;
+
+    grid-template-columns:1.25fr .75fr;
+
+    gap:35px;
+}
+
+
+/* Nabiha card */
+
+.nabiha-card{
+
+    position:relative;
+
+    background:white;
+
+    border:1px solid var(--line);
+
+    border-radius:9px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+}
+
+.nabiha-photo{
+
+    height:430px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#f3e9df;
+}
+
+.nabiha-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center top;
+}
+
+
+/*
+   FLOWER OVERLAY
+   It hides the face as requested.
+*/
+
+.face-flower{
+
+    position:absolute;
+
+    left:50%;
+
+    top:25%;
+
+    transform:translate(-50%,-50%);
+
+    width:92px;
+    height:92px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:5;
+
+    font-size:73px;
+
+    filter:
+        drop-shadow(0 5px 7px rgba(0,0,0,.20));
+
+    pointer-events:none;
+}
+
+.nabiha-info{
+
+    padding:23px;
+}
+
+.nabiha-info .role{
+
+    color:#987b18;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    letter-spacing:1.6px;
+
+    text-transform:uppercase;
+}
+
+.nabiha-info h3{
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:27px;
+
+    margin:4px 0;
+}
+
+.nabiha-info p{
+
+    color:#748079;
+
+    font-size:10px;
+}
+
+
+/* faculty list */
+
+.faculty-list{
+
+    background:var(--green);
+
+    padding:28px;
+
+    border-radius:8px;
+
+    color:#fff;
+
+    box-shadow:var(--shadow);
+}
+
+.faculty-list h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:27px;
+
+    margin-bottom:6px;
+}
+
+.faculty-list > p{
+
+    color:#b9cec4;
+
+    font-size:10px;
+
+    margin-bottom:20px;
+}
+
+.person{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.10);
+}
+
+.person:last-child{
+    border-bottom:0;
+}
+
+.person-icon{
+
+    width:35px;
+    height:35px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--gold2);
+
+    flex-shrink:0;
+}
+
+.person strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:10px;
+}
+
+.person span{
+
+    color:#a9bdb4;
+
+    font-size:8px;
+}
+
+
+/* =========================================================
+   CAMPUS GALLERY
+========================================================= */
+
+.gallery{
+    background:#fff;
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:1.25fr .75fr;
+
+    grid-template-rows:230px 230px;
+
+    gap:13px;
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:7px;
+
+    background:#ddd;
+}
+
+.gallery-item:first-child{
+    grid-row:1 / 3;
+}
+
+.gallery-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+.gallery-caption{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:40px 18px 16px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.82)
+    );
+
+    color:#fff;
+}
+
+.gallery-caption strong{
+
+    display:block;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:18px;
+}
+
+.gallery-caption span{
+
+    color:#d0ded8;
+
+    font-size:8px;
+}
+
+
+/* =========================================================
+   UNIVERSITY INFORMATION
+========================================================= */
+
+.info{
+
+    background:var(--cream);
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.info-card{
+
+    padding:25px;
+
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:7px;
+}
+
+.info-card i{
+
+    color:var(--gold);
+
+    font-size:21px;
+
+    margin-bottom:12px;
+}
+
+.info-card h3{
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+.info-card p{
+
+    color:#718079;
+
+    font-size:10px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   BLOG
+========================================================= */
+
+.blog{
+    background:#fff;
+}
+
+.blog-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.blog-card{
+
+    border:1px solid var(--line);
+
+    background:#fff;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.blog-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+}
+
+.blog-image{
+
+    height:195px;
+
+    overflow:hidden;
+}
+
+.blog-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.blog-body{
+    padding:20px;
+}
+
+.category{
+
+    color:#987b18;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    letter-spacing:1.4px;
+}
+
+.blog-body h3{
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:20px;
+
+    line-height:1.35;
+
+    margin:7px 0;
+}
+
+.blog-body p{
+
+    color:#728079;
+
+    font-size:10px;
+
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #021f15,
+            #07533a
+        );
+
+    color:#fff;
+}
+
+.cta-inner{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+.cta h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:39px;
+
+    line-height:1.15;
+
+    margin-bottom:7px;
+}
+
+.cta p{
+
+    color:#bcd0c6;
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:#011c12;
+
+    color:#96aaa1;
+
+    padding:60px 0 20px;
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+
+    gap:40px;
+
+    padding-bottom:40px;
+}
+
+.footer-logo{
+
+    width:68px;
+    height:68px;
+
+    object-fit:contain;
+
+    margin-bottom:13px;
+}
+
+.footer-brand h3{
+
+    color:white;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:22px;
+
+    margin-bottom:8px;
+}
+
+.footer-brand p{
+
+    max-width:320px;
+
+    font-size:10px;
+
+    line-height:1.8;
+}
+
+.footer-col h4{
+
+    color:var(--gold2);
+
+    font-size:8px;
+
+    letter-spacing:1.6px;
+
+    margin-bottom:15px;
+
+    text-transform:uppercase;
+}
+
+.footer-col ul{
+
+    list-style:none;
+
+    display:grid;
+
+    gap:8px;
+}
+
+.footer-col li{
+
+    font-size:9px;
+
+    color:#91a69c;
+}
+
+.footer-col a:hover{
+    color:white;
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:8px;
+}
+
+
+/* =========================================================
+   SCROLL TOP
+========================================================= */
+
+.top-button{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:43px;
+    height:43px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:#12271c;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+    z-index:1001;
+}
+
+.top-button.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    transition:
+
+        opacity .7s ease,
+
+        transform .7s ease;
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .nav{
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .dept-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .program-grid,
+    .lab-grid,
+    .blog-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .faculty-layout{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:760px){
+
+    .topbar{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .nav{
+
+        position:absolute;
+
+        top:82px;
+
+        left:0;
+        right:0;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        background:#fff;
+
+        padding:20px 4%;
+
+        box-shadow:0 15px 40px rgba(0,0,0,.12);
+    }
+
+    .nav.open{
+        display:flex;
+    }
+
+    .nav a{
+        padding:8px 0;
+    }
+
+    .nav a::after{
+        bottom:0;
+    }
+
+    .hero{
+        min-height:930px;
+    }
+
+    .hero-content{
+        padding-top:55px;
+        padding-bottom:220px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .dept-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat{
+        min-height:75px;
+    }
+
+    .about-grid,
+    .bsit-grid,
+    .dld-grid{
+        grid-template-columns:1fr;
+    }
+
+    .program-grid,
+    .lab-grid,
+    .blog-grid,
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+        grid-template-rows:260px 200px 200px;
+    }
+
+    .gallery-item:first-child{
+        grid-row:auto;
+    }
+
+    .spec-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .logo img{
+        width:49px;
+        height:49px;
+    }
+
+    .logo-text strong{
+        font-size:16px;
+    }
+
+    .logo-text small{
+        font-size:6px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .feature-head{
+        flex-direction:column;
+    }
+
+    .section-head h2{
+        font-size:35px;
+    }
+
+    .spec-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:7px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     TOP BAR
+====================================================== -->
+
+<div class="topbar">
+
+<div class="container topbar-inner">
+
+    <div>
+
+        <span>
+            <i class="fa-solid fa-location-dot"></i>
+            Katchehry Road, Layyah
+        </span>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            info@ul.edu.pk
+        </span>
+
+    </div>
+
+    <div>
+
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            +92 606 920247
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+<!-- ======================================================
+     NAVIGATION
+====================================================== -->
+
+<header class="navbar">
+
+<div class="container nav-inner">
+
+
+<a href="#home" class="logo">
+
+    <img
+        src="university-of-layyah-pk-logo-seal.png"
+        alt="University of Layyah official logo"
+    >
+
+    <div class="logo-text">
+
+        <strong>
+            University of Layyah
+        </strong>
+
+        <small>
+            Education • Research • Innovation
+        </small>
+
+    </div>
+
+</a>
+
+
+<button class="menu" id="menu">
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+
+
+<ul class="nav" id="nav">
+
+    <li>
+        <a href="#home" class="active">
+            HOME
+        </a>
+    </li>
+
+    <li>
+        <a href="#about">
+            UNIVERSITY
+        </a>
+    </li>
+
+    <li>
+        <a href="#programs">
+            PROGRAMS
+        </a>
+    </li>
+
+    <li>
+        <a href="#labs">
+            LABS
+        </a>
+    </li>
+
+    <li>
+        <a href="#faculty">
+            FACULTY
+        </a>
+    </li>
+
+    <li>
+        <a href="#gallery">
+            CAMPUS
+        </a>
+    </li>
+
+    <li>
+        <a href="#blog">
+            BLOG
+        </a>
+    </li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero" id="home">
+
+
+<div class="container hero-content">
+
+
+<div class="breadcrumb">
+
+    <strong>
+        UNIVERSITY OF LAYYAH
+    </strong>
+
+    /
+
+    FACULTY OF COMPUTING & ENGINEERING
+
+</div>
+
+
+<div class="label">
+
+    <span class="label-line"></span>
+
+    COMPUTING • ENGINEERING • INFORMATION TECHNOLOGY
+
+</div>
+
+
+<h1>
+
+    Shaping the
+
+    <span>
+        Digital Future
+    </span>
+
+    of Layyah
+
+</h1>
+
+
+<p class="hero-desc">
+
+    A premium academic blog experience dedicated to
+    the University of Layyah, highlighting its academic
+    programs, faculty, laboratories, research culture,
+    campus environment and the growing Faculty of
+    Computing & Engineering.
+
+</p>
+
+
+
+<!-- BSIT -->
+
+<div class="feature">
+
+<div class="feature-head">
+
+    <div>
+
+        <div class="feature-label">
+            DEPARTMENT OF INFORMATION TECHNOLOGY
+        </div>
+
+        <h2>
+            BS Information Technology
+        </h2>
+
+    </div>
+
+    <div class="degree">
+        BSIT
+    </div>
+
+</div>
+
+
+<p>
+
+    The official Department of Information Technology
+    offers BS Information Technology. The department
+    focuses on modern information systems and practical
+    areas including networking, system administration,
+    databases, cybersecurity, web technologies, cloud
+    computing and IT project management.
+
+</p>
+
+
+<div class="tags">
+
+    <span>Programming</span>
+    <span>Web Technologies</span>
+    <span>Databases</span>
+    <span>Networks</span>
+    <span>Cybersecurity</span>
+    <span>Cloud Computing</span>
+    <span>System Administration</span>
+    <span>IT Projects</span>
+
+</div>
+
+
+<a
+href="https://ul.edu.pk/department-detail/MTk1MQ==/department-of-information-technology"
+target="_blank"
+class="btn">
+
+    Official IT Department
+
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+</a>
+
+</div>
+
+
+
+<!-- DEPARTMENTS -->
+
+<div class="departments">
+
+<div class="departments-title">
+    FACULTY OF COMPUTING & ENGINEERING
+</div>
+
+
+<div class="dept-grid">
+
+
+<div class="dept">
+
+    <div class="dept-number">
+        01
+    </div>
+
+    <div>
+
+        <strong>
+            Computer Engineering
+        </strong>
+
+        <small>
+            Engineering & Embedded Systems
+        </small>
+
+    </div>
+
+</div>
+
+
+<div class="dept">
+
+    <div class="dept-number">
+        02
+    </div>
+
+    <div>
+
+        <strong>
+            Computer Science
+        </strong>
+
+        <small>
+            Computing & Software
+        </small>
+
+    </div>
+
+</div>
+
+
+<div class="dept">
+
+    <div class="dept-number">
+        03
+    </div>
+
+    <div>
+
+        <strong>
+            Information Technology
+        </strong>
+
+        <small>
+            Digital Systems & IT
+        </small>
+
+    </div>
+
+</div>
+
+
+<div class="dept">
+
+    <div class="dept-number">
+        04
+    </div>
+
+    <div>
+
+        <strong>
+            E-Rozgaar
+        </strong>
+
+        <small>
+            Freelancing & Digital Skills
+        </small>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- HERO STATS -->
+
+<div class="hero-stats">
+
+<div class="container stats">
+
+    <div class="stat">
+
+        <strong>
+            2024
+        </strong>
+
+        <span>
+            Faculty Established
+        </span>
+
+    </div>
+
+    <div class="stat">
+
+        <strong>
+            3+
+        </strong>
+
+        <span>
+            Computing Departments
+        </span>
+
+    </div>
+
+    <div class="stat">
+
+        <strong>
+            BSIT
+        </strong>
+
+        <span>
+            IT Undergraduate Program
+        </span>
+
+    </div>
+
+    <div class="stat">
+
+        <strong>
+            5
+        </strong>
+
+        <span>
+            University Faculties
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- ======================================================
+     ABOUT UNIVERSITY
+====================================================== -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+    <div class="eyebrow">
+        UNIVERSITY OF LAYYAH
+    </div>
+
+    <h2>
+        Education, research
+        & regional development
+    </h2>
+
+    <p>
+
+        University of Layyah is developing an academic
+        environment that combines higher education,
+        practical learning, research and professional
+        development.
+
+    </p>
+
+</div>
+
+
+<div class="about-grid">
+
+
+<div class="about-image reveal">
+
+    <img
+        src="https://ul.edu.pk//storage/career/files/Faculty-bdf81.jpg"
+        alt="University of Layyah Faculty of Computing and Engineering building"
+    >
+
+    <div class="image-caption">
+
+        <strong>
+            Faculty of Computing & Engineering
+        </strong>
+
+        <span>
+            University of Layyah
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="about-text reveal">
+
+    <h3>
+        A modern direction for
+        computing education
+    </h3>
+
+
+    <p>
+
+        The Faculty of Computing & Engineering was
+        established in 2024. Its official description
+        emphasizes computing, engineering and emerging
+        technologies, with hands-on learning, research
+        and professional development.
+
+    </p>
+
+
+    <p>
+
+        The faculty's learning environment includes
+        smart classrooms, computer laboratories,
+        research and final-year projects, workshops,
+        internships and industry exposure.
+
+    </p>
+
+
+    <ul class="checks">
+
+        <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Smart classrooms
+        </li>
+
+        <li>
+            <i class="fa-solid fa-circle-check"></i>
+            High-performance computer laboratories
+        </li>
+
+        <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Final-year project environment
+        </li>
+
+        <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Workshops and internships
+        </li>
+
+        <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Research and emerging technologies
+        </li>
+
+    </ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     PROGRAMS
+====================================================== -->
+
+<section class="programs" id="programs">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+    <div class="eyebrow">
+        ACADEMIC PROGRAMS
+    </div>
+
+    <h2>
+        Computing & Engineering
+    </h2>
+
+    <p>
+
+        The current official Faculty listing identifies
+        Computer Engineering, Computer Science,
+        Information Technology and E-Rozgaar.
+
+    </p>
+
+</div>
+
+
+<div class="program-grid">
+
+
+<div class="program reveal">
+
+    <div class="program-icon">
+        <i class="fa-solid fa-microchip"></i>
+    </div>
+
+    <h3>
+        Computer Engineering
+    </h3>
+
+    <p>
+
+        Engineering-based education connecting
+        computing systems, hardware, software,
+        digital systems and modern engineering
+        applications.
+
+    </p>
+
+    <span class="badge">
+        B.SC COMPUTER ENGINEERING
+    </span>
+
+</div>
+
+
+<div class="program reveal">
+
+    <div class="program-icon">
+        <i class="fa-solid fa-code"></i>
+    </div>
+
+    <h3>
+        Computer Science
+    </h3>
+
+    <p>
+
+        Computing and software-oriented education
+        covering programming, algorithms, systems,
+        databases, AI and modern software development.
+
+    </p>
+
+    <span class="badge">
+        BS COMPUTER SCIENCE
+    </span>
+
+</div>
+
+
+<div class="program reveal">
+
+    <div class="program-icon">
+        <i class="fa-solid fa-network-wired"></i>
+    </div>
+
+    <h3>
+        Information Technology
+    </h3>
+
+    <p>
+
+        Practical IT education focused on information
+        systems, networking, databases, cybersecurity,
+        web technologies and cloud computing.
+
+    </p>
+
+    <span class="badge">
+        BS INFORMATION TECHNOLOGY
+    </span>
+
+</div>
+
+
+<div class="program reveal">
+
+    <div class="program-icon">
+        <i class="fa-solid fa-laptop-code"></i>
+    </div>
+
+    <h3>
+        E-Rozgaar Program
+    </h3>
+
+    <p>
+
+        Digital-skills pathways listed by the University,
+        including freelancing, soft skills, SEO and
+        digital marketing, graphic design and
+        YouTube automation.
+
+    </p>
+
+    <span class="badge">
+        DIGITAL SKILLS
+    </span>
+
+</div>
+
+
+<div class="program reveal">
+
+    <div class="program-icon">
+        <i class="fa-solid fa-brain"></i>
+    </div>
+
+    <h3>
+        BSCS — Artificial Intelligence
+    </h3>
+
+    <p>
+
+        The University's current academic navigation
+        also lists BSCS Artificial Intelligence under
+        the Department of Computer Science.
+
+    </p>
+
+    <span class="badge">
+        ARTIFICIAL INTELLIGENCE
+    </span>
+
+</div>
+
+
+<div class="program reveal">
+
+    <div class="program-icon">
+        <i class="fa-solid fa-chart-column"></i>
+    </div>
+
+    <h3>
+        BSCS — Data Science
+    </h3>
+
+    <p>
+
+        Data-focused study is listed within the current
+        Information Technology academic navigation,
+        providing a pathway toward data analysis and
+        intelligent computing.
+
+    </p>
+
+    <span class="badge">
+        DATA SCIENCE
+    </span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     INFORMATION TECHNOLOGY
+====================================================== -->
+
+<section class="bsit">
+
+<div class="container bsit-grid">
+
+
+<div class="bsit-text">
+
+<div class="section-head reveal">
+
+    <div class="eyebrow">
+        DEPARTMENT OF INFORMATION TECHNOLOGY
+    </div>
+
+    <h2>
+        Where theory becomes
+        practical technology
+    </h2>
+
+    <p>
+
+        The Department of Information Technology
+        prepares students to manage, develop and
+        secure modern information systems.
+
+    </p>
+
+</div>
+
+
+<p class="reveal">
+
+    According to the official department information,
+    the BS Information Technology curriculum includes
+    computer networks, operating systems, databases,
+    web technologies, information security, cloud
+    computing and IT project management.
+
+</p>
+
+
+<div class="features reveal">
+
+
+<div class="feature-small">
+    <i class="fa-solid fa-network-wired"></i>
+    <span>Computer Networks</span>
+</div>
+
+<div class="feature-small">
+    <i class="fa-solid fa-server"></i>
+    <span>System Administration</span>
+</div>
+
+<div class="feature-small">
+    <i class="fa-solid fa-database"></i>
+    <span>Database Management</span>
+</div>
+
+<div class="feature-small">
+    <i class="fa-solid fa-shield-halved"></i>
+    <span>Cybersecurity</span>
+</div>
+
+<div class="feature-small">
+    <i class="fa-solid fa-globe"></i>
+    <span>Web Technologies</span>
+</div>
+
+<div class="feature-small">
+    <i class="fa-solid fa-cloud"></i>
+    <span>Cloud Computing</span>
+</div>
+
+<div class="feature-small">
+    <i class="fa-solid fa-diagram-project"></i>
+    <span>IT Project Management</span>
+</div>
+
+<div class="feature-small">
+    <i class="fa-solid fa-flask"></i>
+    <span>Practical Laboratories</span>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="bsit-image reveal">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04230.jpg"
+        alt="University of Layyah computing laboratory workstations"
+    >
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     LABORATORIES
+====================================================== -->
+
+<section class="labs" id="labs">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+    <div class="eyebrow">
+        PRACTICAL FACILITIES
+    </div>
+
+    <h2>
+        Laboratories that turn
+        ideas into projects
+    </h2>
+
+    <p>
+
+        The official Computer Engineering laboratory
+        information documents Computing Lab II, DLD Lab
+        and other practical facilities supporting
+        computing and engineering education.
+
+    </p>
+
+</div>
+
+
+<div class="lab-grid">
+
+
+<!-- COMPUTING LAB -->
+
+<div class="lab-card reveal">
+
+<div class="lab-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04205.jpg"
+        alt="Computing Lab II inauguration"
+    >
+
+</div>
+
+
+<div class="lab-content">
+
+    <div class="lab-number">
+        LAB 01 • COMPUTING
+    </div>
+
+    <h3>
+        Computing Lab II
+    </h3>
+
+    <p>
+
+        A computing facility designed for intensive
+        workloads, Final Year Projects and advanced
+        research including Machine Learning.
+
+    </p>
+
+
+    <ul class="lab-list">
+
+        <li>
+            <i class="fa-solid fa-check"></i>
+            High-performance workstations
+        </li>
+
+        <li>
+            <i class="fa-solid fa-check"></i>
+            High-speed networking
+        </li>
+
+        <li>
+            <i class="fa-solid fa-check"></i>
+            AI & Machine Learning work
+        </li>
+
+        <li>
+            <i class="fa-solid fa-check"></i>
+            Final Year Projects
+        </li>
+
+    </ul>
+
+</div>
+
+</div>
+
+
+
+<!-- WORKSTATIONS -->
+
+<div class="lab-card reveal">
+
+<div class="lab-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04230.jpg"
+        alt="Dell computers in University of Layyah Computing Lab"
+    >
+
+</div>
+
+
+<div class="lab-content">
+
+    <div class="lab-number">
+        LAB 02 • WORKSTATIONS
+    </div>
+
+    <h3>
+        Modern Computing Workstations
+    </h3>
+
+    <p>
+
+        The official lab information specifies
+        modern workstations suitable for programming,
+        software development and advanced computing
+        workloads.
+
+    </p>
+
+
+    <ul class="lab-list">
+
+        <li>
+            <i class="fa-solid fa-microchip"></i>
+            Core i5 14th Generation
+        </li>
+
+        <li>
+            <i class="fa-solid fa-memory"></i>
+            16 GB RAM
+        </li>
+
+        <li>
+            <i class="fa-solid fa-hard-drive"></i>
+            512 GB SSD
+        </li>
+
+        <li>
+            <i class="fa-solid fa-network-wired"></i>
+            High-speed networking
+        </li>
+
+    </ul>
+
+</div>
+
+</div>
+
+
+
+<!-- DLD -->
+
+<div class="lab-card reveal">
+
+<div class="lab-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04289.jpg"
+        alt="Digital Logic Design laboratory circuit"
+    >
+
+</div>
+
+
+<div class="lab-content">
+
+    <div class="lab-number">
+        LAB 03 • DIGITAL LOGIC
+    </div>
+
+    <h3>
+        DLD Laboratory
+    </h3>
+
+    <p>
+
+        The DLD Lab supports digital systems,
+        computer architecture and microprocessor
+        learning through hardware-based experiments.
+
+    </p>
+
+
+    <ul class="lab-list">
+
+        <li>
+            <i class="fa-solid fa-microchip"></i>
+            Digital Logic Trainers
+        </li>
+
+        <li>
+            <i class="fa-solid fa-bolt"></i>
+            Power Supplies
+        </li>
+
+        <li>
+            <i class="fa-solid fa-wave-square"></i>
+            Digital Oscilloscopes
+        </li>
+
+        <li>
+            <i class="fa-solid fa-robot"></i>
+            Robotics Projects
+        </li>
+
+    </ul>
+
+</div>
+
+</div>
+
+
+
+<!-- ELECTRONICS -->
+
+<div class="lab-card reveal">
+
+<div class="lab-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04315.jpg"
+        alt="Electronics practical work at University of Layyah"
+    >
+
+</div>
+
+
+<div class="lab-content">
+
+    <div class="lab-number">
+        LAB 04 • ELECTRONICS
+    </div>
+
+    <h3>
+        Electronics Laboratory
+    </h3>
+
+    <p>
+
+        Practical electronics work allows students
+        to understand hardware systems, measurement,
+        troubleshooting and circuit-based engineering.
+
+    </p>
+
+
+    <ul class="lab-list">
+
+        <li>
+            <i class="fa-solid fa-gauge-high"></i>
+            Measurement equipment
+        </li>
+
+        <li>
+            <i class="fa-solid fa-plug"></i>
+            Power equipment
+        </li>
+
+        <li>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            Troubleshooting
+        </li>
+
+        <li>
+            <i class="fa-solid fa-gears"></i>
+            Practical engineering
+        </li>
+
+    </ul>
+
+</div>
+
+</div>
+
+
+
+<!-- STUDENT CODING -->
+
+<div class="lab-card reveal">
+
+<div class="lab-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04208.jpg"
+        alt="Student working in University of Layyah Computing Lab"
+    >
+
+</div>
+
+
+<div class="lab-content">
+
+    <div class="lab-number">
+        LAB 05 • STUDENT WORK
+    </div>
+
+    <h3>
+        Programming & Project Work
+    </h3>
+
+    <p>
+
+        Students use the computing environment for
+        programming, software development, AI-related
+        work and full-stack project development.
+
+    </p>
+
+
+    <ul class="lab-list">
+
+        <li>
+            <i class="fa-solid fa-code"></i>
+            Programming
+        </li>
+
+        <li>
+            <i class="fa-solid fa-brain"></i>
+            Machine Learning
+        </li>
+
+        <li>
+            <i class="fa-solid fa-laptop-code"></i>
+            Web Development
+        </li>
+
+        <li>
+            <i class="fa-solid fa-project-diagram"></i>
+            Final Year Projects
+        </li>
+
+    </ul>
+
+</div>
+
+</div>
+
+
+
+<!-- LAB MANAGEMENT -->
+
+<div class="lab-card reveal">
+
+<div class="lab-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04311.jpg"
+        alt="Laboratory component storage"
+    >
+
+</div>
+
+
+<div class="lab-content">
+
+    <div class="lab-number">
+        LAB 06 • RESOURCES
+    </div>
+
+    <h3>
+        Engineering Resources
+    </h3>
+
+    <p>
+
+        The engineering laboratory ecosystem includes
+        organized components and equipment supporting
+        rapid prototyping and student research.
+
+    </p>
+
+
+    <ul class="lab-list">
+
+        <li>
+            <i class="fa-solid fa-boxes-stacked"></i>
+            Component inventory
+        </li>
+
+        <li>
+            <i class="fa-solid fa-microchip"></i>
+            Microcontrollers
+        </li>
+
+        <li>
+            <i class="fa-solid fa-circle-nodes"></i>
+            Logic gates
+        </li>
+
+        <li>
+            <i class="fa-solid fa-memory"></i>
+            Flip-flops
+        </li>
+
+    </ul>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- LAB SPECIFICATION PANEL -->
+
+<div class="lab-specs reveal">
+
+    <h3>
+        Computing Lab II — Technical Profile
+    </h3>
+
+    <p>
+
+        The following specifications are taken from
+        the University's official Computer Engineering
+        laboratory page.
+
+    </p>
+
+
+    <div class="spec-grid">
+
+
+        <div class="spec">
+
+            <i class="fa-solid fa-microchip"></i>
+
+            <strong>
+                Processor
+            </strong>
+
+            <span>
+                Core i5 — 14th Generation
+            </span>
+
+        </div>
+
+
+        <div class="spec">
+
+            <i class="fa-solid fa-memory"></i>
+
+            <strong>
+                Memory
+            </strong>
+
+            <span>
+                16 GB RAM
+            </span>
+
+        </div>
+
+
+        <div class="spec">
+
+            <i class="fa-solid fa-hard-drive"></i>
+
+            <strong>
+                Storage
+            </strong>
+
+            <span>
+                512 GB SSD
+            </span>
+
+        </div>
+
+
+        <div class="spec">
+
+            <i class="fa-solid fa-code"></i>
+
+            <strong>
+                Software
+            </strong>
+
+            <span>
+                Dev C++, Office, Proteus, HTML/CSS
+            </span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     DLD LAB DETAIL
+====================================================== -->
+
+<section class="dld">
+
+<div class="container dld-grid">
+
+
+<div class="dld-image reveal">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04297.jpg"
+        alt="Digital Logic Design practical work"
+    >
+
+</div>
+
+
+<div class="dld-content reveal">
+
+    <div class="eyebrow">
+        COMPUTER ENGINEERING
+    </div>
+
+    <h3>
+        From Logic Gates
+        to Robotics
+    </h3>
+
+    <p>
+
+        The official DLD Lab description explains that
+        students work with digital logic training systems,
+        integrated circuits, power supplies, oscilloscopes,
+        microcontrollers and project hardware.
+
+    </p>
+
+    <p>
+
+        Practical work progresses from verifying Boolean
+        expressions and designing combinational circuits
+        to troubleshooting and advanced semester projects.
+
+    </p>
+
+
+    <div class="equipment">
+
+        <div>
+            <i class="fa-solid fa-microchip"></i>
+            Digital Logic Trainers
+        </div>
+
+        <div>
+            <i class="fa-solid fa-bolt"></i>
+            Power Supplies
+        </div>
+
+        <div>
+            <i class="fa-solid fa-wave-square"></i>
+            Digital Oscilloscopes
+        </div>
+
+        <div>
+            <i class="fa-solid fa-robot"></i>
+            Robotics Projects
+        </div>
+
+        <div>
+            <i class="fa-solid fa-toggle-on"></i>
+            Flip-Flops
+        </div>
+
+        <div>
+            <i class="fa-solid fa-microchip"></i>
+            Microcontrollers
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     FACULTY
+====================================================== -->
+
+<section class="faculty" id="faculty">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+    <div class="eyebrow">
+        DEPARTMENT OF INFORMATION TECHNOLOGY
+    </div>
+
+    <h2>
+        Faculty & Academic Team
+    </h2>
+
+    <p>
+
+        Faculty information below follows the current
+        University of Layyah Department of Information
+        Technology listing.
+
+    </p>
+
+</div>
+
+
+<div class="faculty-layout">
+
+
+<!-- ====================================================
+     NABIHA
+==================================================== -->
+
+<div class="nabiha-card reveal">
+
+
+<div class="nabiha-photo">
+
+    <!-- ACTUAL OFFICIAL NABIHA KOMAL PHOTO -->
+
+    <img
+    src="https://ul.edu.pk//storage/career/profile_images/42ef1b88-33b9-40c7-9b3b-f9a2dc83ddd9.jpeg"
+    alt="Nabiha Komal - Lecturer Information Technology"
+>
+    </div>
+
+
+</div>
+
+
+<div class="nabiha-info">
+
+    <div class="role">
+        Lecturer — Information Technology
+    </div>
+
+    <h3>
+        Nabiha Komal
+    </h3>
+
+    <p>
+        Department of Information Technology
+        <br>
+        University of Layyah
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- ====================================================
+     FACULTY LIST
+==================================================== -->
+
+<div class="faculty-list reveal">
+
+    <h3>
+        IT Faculty
+    </h3>
+
+    <p>
+        Current faculty listed by the official
+        Department of Information Technology.
+    </p>
+
+
+    <div class="person">
+
+        <div class="person-icon">
+            <i class="fa-solid fa-user-tie"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                Dr. Muhammad Amjad
+            </strong>
+
+            <span>
+                Incharge — Department of Information Technology
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="person">
+
+        <div class="person-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                Dr. Nasrullah
+            </strong>
+
+            <span>
+                Assistant Professor
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="person">
+
+        <div class="person-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                Dr. Muhammad Rehan Abbas
+            </strong>
+
+            <span>
+                Assistant Professor
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="person">
+
+        <div class="person-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                Ali Asif Mujahid
+            </strong>
+
+            <span>
+                Lecturer
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="person">
+
+        <div class="person-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                Faisal Hafeez
+            </strong>
+
+            <span>
+                Lecturer
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="person">
+
+        <div class="person-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                Muhammad Shakeel
+            </strong>
+
+            <span>
+                Lecturer
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="person">
+
+        <div class="person-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                RAFAY MEHDI
+            </strong>
+
+            <span>
+                Lecturer
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="person">
+
+        <div class="person-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+            <strong>
+                Umair Rashid
+            </strong>
+
+            <span>
+                Lecturer
+            </span>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CAMPUS GALLERY
+====================================================== -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+    <div class="eyebrow">
+        OFFICIAL CAMPUS PHOTOGRAPHS
+    </div>
+
+    <h2>
+        Inside the Computing Environment
+    </h2>
+
+    <p>
+
+        A visual presentation of the University's
+        computing and engineering facilities using
+        photographs published on the official
+        University / Computer Engineering websites.
+
+    </p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<!-- BUILDING -->
+
+<div class="gallery-item reveal">
+
+    <img
+        src="https://ul.edu.pk//storage/career/files/Faculty-bdf81.jpg"
+        alt="Faculty of Computing and Engineering building"
+    >
+
+    <div class="gallery-caption">
+
+        <strong>
+            Computing & Engineering Faculty
+        </strong>
+
+        <span>
+            University of Layyah
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- COMPUTING -->
+
+<div class="gallery-item reveal">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04230.jpg"
+        alt="Computing Lab workstations"
+    >
+
+    <div class="gallery-caption">
+
+        <strong>
+            Computing Lab II
+        </strong>
+
+        <span>
+            Dell Workstations
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- STUDENT -->
+
+<div class="gallery-item reveal">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04208.jpg"
+        alt="Student working in Computing Lab"
+    >
+
+    <div class="gallery-caption">
+
+        <strong>
+            Practical Learning
+        </strong>
+
+        <span>
+            Student Computing Activity
+        </span>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     UNIVERSITY INFORMATION
+====================================================== -->
+
+<section class="info">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+    <div class="eyebrow">
+        DISCOVER UNIVERSITY OF LAYYAH
+    </div>
+
+    <h2>
+        More than a classroom
+    </h2>
+
+    <p>
+
+        The University's current website provides
+        information about academic faculties,
+        departments, library, scholarships,
+        medical facilitation, transport, quality
+        enhancement and other university services.
+
+    </p>
+
+</div>
+
+
+<div class="info-grid">
+
+
+<div class="info-card reveal">
+
+    <i class="fa-solid fa-book-open"></i>
+
+    <h3>
+        Central Library
+    </h3>
+
+    <p>
+
+        Academic resources supporting students,
+        teaching, learning and research.
+
+    </p>
+
+</div>
+
+
+<div class="info-card reveal">
+
+    <i class="fa-solid fa-graduation-cap"></i>
+
+    <h3>
+        Scholarships
+    </h3>
+
+    <p>
+
+        The University provides a dedicated
+        Scholarships & Financial Aid section
+        for students.
+
+    </p>
+
+</div>
+
+
+<div class="info-card reveal">
+
+    <i class="fa-solid fa-bus"></i>
+
+    <h3>
+        Student Services
+    </h3>
+
+    <p>
+
+        University information also includes
+        transport and medical facilitation
+        services.
+
+    </p>
+
+</div>
+
+
+<div class="info-card reveal">
+
+    <i class="fa-solid fa-flask"></i>
+
+    <h3>
+        Research
+    </h3>
+
+    <p>
+
+        Computing and engineering students are
+        encouraged toward research, innovation
+        and final-year projects.
+
+    </p>
+
+</div>
+
+
+<div class="info-card reveal">
+
+    <i class="fa-solid fa-briefcase"></i>
+
+    <h3>
+        Industry Exposure
+    </h3>
+
+    <p>
+
+        The Faculty highlights workshops,
+        internships and industry-oriented
+        professional development.
+
+    </p>
+
+</div>
+
+
+<div class="info-card reveal">
+
+    <i class="fa-solid fa-laptop-code"></i>
+
+    <h3>
+        Digital Skills
+    </h3>
+
+    <p>
+
+        Computing education connects students
+        with programming, IT systems, AI,
+        networking and emerging technologies.
+
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     BLOG
+====================================================== -->
+
+<section class="blog" id="blog">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+    <div class="eyebrow">
+        UNIVERSITY BLOG
+    </div>
+
+    <h2>
+        Stories from Computing
+        & Engineering
+    </h2>
+
+    <p>
+
+        Explore the academic environment through
+        laboratories, practical work, technology and
+        student development.
+
+    </p>
+
+</div>
+
+
+<div class="blog-grid">
+
+
+<article class="blog-card reveal">
+
+<div class="blog-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04205.jpg"
+        alt="Computing Lab II"
+    >
+
+</div>
+
+<div class="blog-body">
+
+    <div class="category">
+        LABORATORY
+    </div>
+
+    <h3>
+        Computing Lab II: A Space for Innovation
+    </h3>
+
+    <p>
+
+        The University's Computing Lab II is presented
+        as a facility for developers, researchers,
+        innovators and Final Year Project work.
+
+    </p>
+
+</div>
+
+</article>
+
+
+
+<article class="blog-card reveal">
+
+<div class="blog-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04297.jpg"
+        alt="Digital Logic Design practical"
+    >
+
+</div>
+
+<div class="blog-body">
+
+    <div class="category">
+        COMPUTER ENGINEERING
+    </div>
+
+    <h3>
+        From Digital Logic to Robotics
+    </h3>
+
+    <p>
+
+        Digital Logic Design practicals introduce
+        students to circuits, ICs, Boolean logic,
+        troubleshooting and advanced project work.
+
+    </p>
+
+</div>
+
+</article>
+
+
+
+<article class="blog-card reveal">
+
+<div class="blog-image">
+
+    <img
+        src="https://dce.ul.edu.pk/images/DSC04208.jpg"
+        alt="Student coding in computing laboratory"
+    >
+
+</div>
+
+<div class="blog-body">
+
+    <div class="category">
+        STUDENT LIFE
+    </div>
+
+    <h3>
+        Learning by Building Real Projects
+    </h3>
+
+    <p>
+
+        Practical computing environments give students
+        an opportunity to transform classroom concepts
+        into software and technology projects.
+
+    </p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     OFFICIAL LINKS
+====================================================== -->
+
+<section class="cta">
+
+<div class="container cta-inner">
+
+
+<div>
+
+    <h2>
+        Discover the University
+    </h2>
+
+    <p>
+
+        For admissions, official notices, programs,
+        faculty information and university services,
+        visit the official University of Layyah website.
+
+    </p>
+
+</div>
+
+
+<a
+href="https://ul.edu.pk/"
+target="_blank"
+class="btn">
+
+    Visit Official Website
+
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+<div class="container">
+
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+    <img
+        class="footer-logo"
+        src="university-of-layyah-pk-logo-seal.png"
+        alt="University of Layyah logo"
+    >
+
+    <h3>
+        University of Layyah
+    </h3>
+
+    <p>
+
+        Academic blog and information portal
+        highlighting the University's education,
+        research, computing and engineering
+        environment.
+
+    </p>
+
+</div>
+
+
+<div class="footer-col">
+
+    <h4>
+        University
+    </h4>
+
+    <ul>
+
+        <li>
+            <a href="#about">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="#programs">
+                Programs
+            </a>
+        </li>
+
+        <li>
+            <a href="#faculty">
+                Faculty
+            </a>
+        </li>
+
+        <li>
+            <a href="#gallery">
+                Campus
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<div class="footer-col">
+
+    <h4>
+        Facilities
+    </h4>
+
+    <ul>
+
+        <li>
+            <a href="#labs">
+                Computing Labs
+            </a>
+        </li>
+
+        <li>
+            <a href="#labs">
+                DLD Lab
+            </a>
+        </li>
+
+        <li>
+            <a href="#labs">
+                Electronics
+            </a>
+        </li>
+
+        <li>
+            <a href="#labs">
+                Workstations
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<div class="footer-col">
+
+    <h4>
+        Official
+    </h4>
+
+    <ul>
+
+        <li>
+            <a
+            href="https://ul.edu.pk/"
+            target="_blank">
+                University Website
+            </a>
+        </li>
+
+        <li>
+            <a
+            href="https://ul.edu.pk/faculty-detail/MTIwNA==/faculty-of-computing-engineering"
+            target="_blank">
+                Computing & Engineering
+            </a>
+        </li>
+
+        <li>
+            <a
+            href="https://ul.edu.pk/department-detail/MTk1MQ==/department-of-information-technology"
+            target="_blank">
+                Information Technology
+            </a>
+        </li>
+
+        <li>
+            <a
+            href="https://dce.ul.edu.pk/"
+            target="_blank">
+                Computer Engineering
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+    <span>
+        © 2026 University of Layyah
+    </span>
+
+    <span>
+        Academic Blog • Computing & Engineering
+    </span>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<!-- ======================================================
+     BACK TO TOP
+====================================================== -->
+
+<button
+class="top-button"
+id="topButton"
+aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+/* MOBILE MENU */
+
+const menu =
+document.getElementById("menu");
+
+const nav =
+document.getElementById("nav");
+
+menu.addEventListener("click",()=>{
+
+    nav.classList.toggle("open");
+
+});
+
+
+/* CLOSE MENU */
+
+document.querySelectorAll(".nav a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        nav.classList.remove("open");
+
+    });
+
+});
+
+
+/* ACTIVE NAV */
+
+const sections =
+document.querySelectorAll("section[id]");
+
+const navLinks =
+document.querySelectorAll(".nav a");
+
+window.addEventListener("scroll",()=>{
+
+    let current="";
+
+    sections.forEach(section=>{
+
+        const position =
+        section.offsetTop - 150;
+
+        if(window.scrollY >= position){
+
+            current =
+            section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(link=>{
+
+        link.classList.remove("active");
+
+        if(
+            link.getAttribute("href")
+            === "#" + current
+        ){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+/* BACK TO TOP */
+
+const topButton =
+document.getElementById("topButton");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 500){
+
+        topButton.classList.add("show");
+
+    }else{
+
+        topButton.classList.remove("show");
+
+    }
+
+});
+
+
+topButton.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+
+/* SCROLL REVEAL */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(
+
+    entries=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+
+revealElements.forEach(element=>{
+
+    observer.observe(element);
+
+});
+
+</script>
+
+
+</body>
+</html>
